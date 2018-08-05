@@ -1,6 +1,6 @@
 /**
  * Length of Longest Subsequence
- * Problem Setter: mayank111 
+ * Problem Setter: mayank111
  * Problem Tester: glowing_glare
  * Given an array of integers, find the length of longest subsequence which is first increasing then decreasing.
  *
@@ -18,7 +18,7 @@
  *
  * LIS[i] : longest increasing subsequence till i in the array A[0..i]
  * LDS[i] : longest decreasing subsequence from i till end of the array A[i..sz]
- * 
+ *
  * @param  vector const vector<int> &A 		the input sequence
  * @return int       						length of the longest subsequence
  */
@@ -31,7 +31,7 @@ int Solution::longestSubsequenceLength(const vector<int> &A) {
 
     vector<int> LIS(sz, 1);
     vector<int> LDS(sz, 1);
-    
+
     int j = 0, i = 1;
 
     while (i < sz) {
@@ -44,7 +44,7 @@ int Solution::longestSubsequenceLength(const vector<int> &A) {
         }
         i ++;
     }
-    
+
     i = sz - 2;
 
     while (i >= 0) {
@@ -59,10 +59,10 @@ int Solution::longestSubsequenceLength(const vector<int> &A) {
     }
 
     int ans = 0;
-    
+
     for (i = 0; i < sz; i ++) {
         ans = max(ans, LIS[i] + LDS[i] - 1);
     }
-    
+
     return ans;
 }
