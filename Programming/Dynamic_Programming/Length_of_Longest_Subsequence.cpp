@@ -4,7 +4,7 @@
  * Problem Tester: glowing_glare
  * Given an array of integers, find the length of longest subsequence which is first increasing then decreasing.
  *
- * **Example: **
+ * Example:
  *
  * For the given array [1 11 2 10 4 5 2 1]
  *
@@ -20,6 +20,7 @@
  * LDS[i] : longest decreasing subsequence from i till end of the array A[i..sz]
  *
  * @param  vector const vector<int> &A 		the input sequence
+ *
  * @return int       						length of the longest subsequence
  */
 int Solution::longestSubsequenceLength(const vector<int> &A) {
